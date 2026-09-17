@@ -61,14 +61,13 @@ export default function Team() {
                     <a href={member.linkedin} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-slate-50 text-slate-600 hover:bg-slate-900 hover:text-white transition-colors border border-slate-200">
                       <Linkedin className="w-5 h-5" />
                     </a>
-                    <a 
-                      href={`https://mail.google.com/mail/?view=cm&fs=1&to=${member.email}`}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-slate-50 text-slate-600 hover:bg-slate-900 hover:text-white transition-colors border border-slate-200"
+                    <button 
+                      onClick={() => window.open(`https://mail.google.com/mail/?view=cm&fs=1&to=${member.email}`, '_blank', 'noopener,noreferrer')}
+                      className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-slate-50 text-slate-600 hover:bg-slate-900 hover:text-white transition-colors border border-slate-200 cursor-pointer"
+                      title="Send Email"
                     >
                       <Mail className="w-5 h-5" />
-                    </a>
+                    </button>
                   </div>
                 </div>
               </motion.div>

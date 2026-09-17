@@ -58,24 +58,16 @@ export default function Contact() {
                   </div>
                   
                   <div className="flex items-start space-x-4">
-                    <a 
-                      href={`https://mail.google.com/mail/?view=cm&fs=1&to=${TEAM_INFO.email}`}
-                      target="_blank"
-                      rel="noopener noreferrer" 
-                      className="bg-teal-50 p-3 rounded-xl shrink-0 hover:bg-teal-100 transition-colors"
+                    <button 
+                      onClick={() => window.open(`https://mail.google.com/mail/?view=cm&fs=1&to=${TEAM_INFO.email}`, '_blank', 'noopener,noreferrer')}
+                      className="bg-teal-50 p-3 rounded-xl shrink-0 hover:bg-teal-100 transition-colors cursor-pointer"
+                      title="Send Email"
                     >
                       <Mail className="w-6 h-6 text-teal-600" />
-                    </a>
+                    </button>
                     <div>
                       <h3 className="font-bold text-slate-900">Email</h3>
-                      <a 
-                        href={`https://mail.google.com/mail/?view=cm&fs=1&to=${TEAM_INFO.email}`}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-teal-600 hover:text-teal-700 mt-1 block"
-                      >
-                        {TEAM_INFO.email}
-                      </a>
+                      <p className="text-slate-600 mt-1">Click the icon to send us a message</p>
                     </div>
                   </div>
                 </div>
