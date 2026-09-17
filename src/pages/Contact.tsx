@@ -63,15 +63,12 @@ export default function Contact() {
                     </div>
                     <div>
                       <h3 className="font-bold text-slate-900">Email</h3>
-                      <button 
-                        onClick={(e) => {
-                          e.preventDefault();
-                          window.parent.location.href = `mailto:${TEAM_INFO.email}`;
-                        }} 
+                      <a 
+                        href={`mailto:${TEAM_INFO.email}`}
                         className="text-teal-600 hover:text-teal-700 mt-1 block"
                       >
                         {TEAM_INFO.email}
-                      </button>
+                      </a>
                     </div>
                   </div>
                 </div>
