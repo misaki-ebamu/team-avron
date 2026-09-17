@@ -58,9 +58,14 @@ export default function Contact() {
                   </div>
                   
                   <div className="flex items-start space-x-4">
-                    <div className="bg-teal-50 p-3 rounded-xl shrink-0">
+                    <a 
+                      href={`https://mail.google.com/mail/?view=cm&fs=1&to=${TEAM_INFO.email}`}
+                      target="_blank"
+                      rel="noopener noreferrer" 
+                      className="bg-teal-50 p-3 rounded-xl shrink-0 hover:bg-teal-100 transition-colors"
+                    >
                       <Mail className="w-6 h-6 text-teal-600" />
-                    </div>
+                    </a>
                     <div>
                       <h3 className="font-bold text-slate-900">Email</h3>
                       <a 
