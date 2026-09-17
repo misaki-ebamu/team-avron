@@ -62,7 +62,9 @@ export default function Team() {
                       <Linkedin className="w-5 h-5" />
                     </a>
                     <a 
-                      href={`mailto:${member.email}`}
+                      href={`https://mail.google.com/mail/?view=cm&fs=1&to=${member.email}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-slate-50 text-slate-600 hover:bg-slate-900 hover:text-white transition-colors border border-slate-200"
                     >
                       <Mail className="w-5 h-5" />

@@ -64,7 +64,9 @@ export default function Contact() {
                     <div>
                       <h3 className="font-bold text-slate-900">Email</h3>
                       <a 
-                        href={`mailto:${TEAM_INFO.email}`}
+                        href={`https://mail.google.com/mail/?view=cm&fs=1&to=${TEAM_INFO.email}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
                         className="text-teal-600 hover:text-teal-700 mt-1 block"
                       >
                         {TEAM_INFO.email}
