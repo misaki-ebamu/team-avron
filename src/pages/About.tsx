@@ -74,8 +74,9 @@ export default function About() {
                 </div>
                 <div className="p-6 text-center">
                   <h3 className="text-xl font-bold text-slate-900 mb-1">{member.name}</h3>
-                  <p className="text-sm font-medium text-teal-600 mb-2">{member.title}</p>
-                  <p className="text-sm text-slate-500">Role: {member.role}</p>
+                  <p className="text-sm font-medium text-teal-600 mb-1">{member.title}</p>
+                  <p className="text-xs font-semibold text-slate-400 mb-2">{member.regNumber}</p>
+                  <p className="text-sm text-slate-600 bg-slate-50 py-1 px-3 rounded-full inline-block border border-slate-100">Role: {member.role}</p>
                 </div>
               </motion.div>
             ))}
