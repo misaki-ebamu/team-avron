@@ -42,13 +42,25 @@ export default function Gallery() {
     setSearchParams(cat === 'All' ? {} : { category: cat });
   };
 
-  const categories = ['Meetings', 'All', 'Team', 'Research', 'Design', 'Prototype', 'Testing', 'Presentations'];
+  const getFallbackImage = (currentSrc: string) => {
+    if (currentSrc.includes('hmw_ideation_overview')) return './assets/aistudio/1_0a3ac266.jpeg';
+    if (currentSrc.includes('hmw_ideation_drafting')) return './assets/aistudio/2_11ee4864.jpeg';
+    if (currentSrc.includes('hmw_ideation_criteria')) return './assets/aistudio/3_99049ec5.jpeg';
+    if (currentSrc.includes('hmw_ideation_discussion')) return './assets/aistudio/4_82381e64.jpeg';
+    if (currentSrc.includes('hmw_ideation_synthesis')) return './assets/aistudio/5_8be59267.jpeg';
+    if (currentSrc.includes('hmw_ideation_prioritization')) return './assets/aistudio/6_3a7afd15.jpeg';
+    if (currentSrc.includes('./gallery/')) return currentSrc.replace('./gallery/', '/gallery/');
+    return currentSrc;
+  };
+
+  const categories = ['Research', 'Meetings', 'All', 'Team', 'Design', 'Prototype', 'Testing', 'Presentations'];
 
   const filteredGallery = filter === 'All' 
     ? GALLERY 
     : GALLERY.filter(img => img.category === filter);
 
   const meetingItems = GALLERY.filter(img => img.category === 'Meetings');
+  const researchItems = GALLERY.filter(img => img.category === 'Research');
 
   return (
     <div className="w-full bg-slate-50 min-h-screen">
@@ -67,14 +79,27 @@ export default function Gallery() {
                 <span>Verified Documentation</span>
               </div>
               <h2 className="text-xl sm:text-2xl font-bold tracking-tight text-white">
-                Official Meetings & Field Immersion Section
+                Field Research & Stakeholder Immersion
               </h2>
               <p className="text-sm text-slate-300 max-w-2xl">
-                Extracted directly from Section 3.3, Section 3.5, and Figures 2, 3, & 4 of the official Team Avron Project Management Report.
+                Visual evidence from Team Avron's 30/10/2026 Design Cube HMW Ideation Sprint at Makerere University College of Health Sciences and official clinical meetings.
               </p>
             </div>
 
-            <div className="flex items-center gap-3 shrink-0">
+            <div className="flex flex-wrap items-center gap-3 shrink-0">
+              <button
+                onClick={() => handleFilterChange('Research')}
+                className={cn(
+                  "px-4 py-2.5 rounded-xl text-sm font-semibold transition-all inline-flex items-center space-x-2 shadow-sm",
+                  filter === 'Research'
+                    ? "bg-teal-500 text-slate-950 font-bold ring-2 ring-teal-400 ring-offset-2 ring-offset-slate-900"
+                    : "bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700"
+                )}
+              >
+                <Sparkles className="w-4 h-4 text-teal-300" />
+                <span>Research & HMW Ideation ({researchItems.length})</span>
+              </button>
+
               <button
                 onClick={() => handleFilterChange('Meetings')}
                 className={cn(
@@ -124,7 +149,9 @@ export default function Gallery() {
                       : "bg-white text-slate-600 border-slate-200 hover:border-slate-300 hover:bg-slate-50 hover:text-slate-900"
                   )}
                 >
-                  <span>{cat === 'Meetings' ? '🤝 Meetings' : cat}</span>
+                  <span>
+                    {cat === 'Research' ? '🔬 Research' : cat === 'Meetings' ? '🤝 Meetings' : cat}
+                  </span>
                   <span className={cn(
                     "text-xs px-2 py-0.5 rounded-full font-mono font-semibold",
                     isSelected ? "bg-slate-800 text-teal-300" : "bg-slate-100 text-slate-500"
@@ -135,6 +162,36 @@ export default function Gallery() {
               );
             })}
           </div>
+
+          {/* Section Description Card when Research is selected */}
+          {filter === 'Research' && (
+            <motion.div 
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              className="bg-white rounded-2xl p-6 md:p-8 mb-12 border border-teal-200/80 shadow-sm relative overflow-hidden"
+            >
+              <div className="absolute top-0 right-0 w-32 h-32 bg-teal-50 rounded-full blur-2xl -z-10" />
+              <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-slate-100 pb-6 mb-6">
+                <div>
+                  <div className="inline-flex items-center space-x-1.5 text-teal-700 text-xs font-bold uppercase tracking-wider bg-teal-50 px-3 py-1 rounded-full border border-teal-200 mb-2">
+                    <Sparkles className="w-3.5 h-3.5 text-teal-600" />
+                    <span>Ideation Session • 30/10/2026 Documentation</span>
+                  </div>
+                  <h3 className="text-2xl font-bold text-slate-900">
+                    How Might We (HMW) Questions for Concept Generation
+                  </h3>
+                </div>
+                <div className="text-sm text-slate-600 bg-teal-50/70 border border-teal-100 px-4 py-2.5 rounded-xl flex items-center space-x-2">
+                  <MapPin className="w-4 h-4 text-teal-600 shrink-0" />
+                  <span><strong>Design Cube</strong>, Makerere University College of Health Sciences (MakCHS)</span>
+                </div>
+              </div>
+
+              <p className="text-slate-600 text-sm md:text-base leading-relaxed">
+                Photos captured on <strong>30/10/2026</strong> during Team Avron's collaborative ideation sprint at the Makerere University College of Health Sciences Design Cube. The team (Ebamu Misaki, Angel Ruth Nassanga, Mercy Nabusiita, and Hope Jibril Tusubila) mapped out <em>How Might We (HMW)</em> challenge questions on flipchart poster sheets, translating validated stakeholder problem statements into concrete engineering concepts aligned with our Criteria of Success benchmarks (0.3m–3.0m range, ≤300ms latency, and ≥120° field of coverage).
+              </p>
+            </motion.div>
+          )}
 
           {/* Section Description Card when Meetings is selected */}
           {filter === 'Meetings' && (
@@ -188,8 +245,9 @@ export default function Gallery() {
                       className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                       onError={(e) => {
                         const target = e.currentTarget;
-                        if (target.src.includes('./gallery/')) {
-                          target.src = target.src.replace('./gallery/', '/gallery/');
+                        const fallback = getFallbackImage(target.src);
+                        if (fallback !== target.src) {
+                          target.src = fallback;
                         }
                       }}
                       loading="lazy"
@@ -309,8 +367,9 @@ export default function Gallery() {
                   className="w-full h-full max-h-[60vh] sm:max-h-[65vh] object-contain"
                   onError={(e) => {
                     const target = e.currentTarget;
-                    if (target.src.includes('./gallery/')) {
-                      target.src = target.src.replace('./gallery/', '/gallery/');
+                    const fallback = getFallbackImage(target.src);
+                    if (fallback !== target.src) {
+                      target.src = fallback;
                     }
                   }}
                 />

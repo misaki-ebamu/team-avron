@@ -1,4 +1,6 @@
 import { motion } from 'motion/react';
+import { Link } from 'react-router-dom';
+import { Camera, Sparkles } from 'lucide-react';
 import { PageHeader } from '../components/PageHeader';
 
 const RESEARCH_STAGES = [
@@ -72,7 +74,30 @@ export default function Research() {
             ))}
           </div>
 
-          <div className="mt-24 p-8 bg-teal-50 border border-teal-100 rounded-3xl text-center">
+          {/* Latest Milestone Spotlight */}
+          <div className="mt-16 p-8 bg-gradient-to-r from-teal-900 to-slate-900 text-white rounded-3xl shadow-xl flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+            <div className="space-y-2 max-w-2xl">
+              <div className="inline-flex items-center space-x-2 bg-teal-500/20 text-teal-300 border border-teal-500/40 px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider">
+                <Sparkles className="w-3.5 h-3.5" />
+                <span>Active Research Milestone • 30/10/2026</span>
+              </div>
+              <h3 className="text-2xl font-bold text-white">
+                How Might We (HMW) Questions for Concept Generation
+              </h3>
+              <p className="text-slate-300 text-sm leading-relaxed">
+                Team Avron conducted an interactive ideation sprint today at the Makerere University College of Health Sciences (MakCHS) Design Cube, mapping out engineering challenge statements to transform our need statement into concrete assistive hardware architectures.
+              </p>
+            </div>
+            <Link
+              to="/gallery?category=Research"
+              className="shrink-0 bg-teal-400 hover:bg-teal-300 text-slate-950 font-bold px-6 py-3 rounded-xl transition-all shadow-lg inline-flex items-center space-x-2"
+            >
+              <Camera className="w-4 h-4" />
+              <span>View Ideation Photos (6)</span>
+            </Link>
+          </div>
+
+          <div className="mt-12 p-8 bg-teal-50 border border-teal-100 rounded-3xl text-center">
             <h3 className="text-2xl font-bold text-slate-900 mb-4">Publications & Papers</h3>
             <p className="text-slate-600 mb-6 max-w-2xl mx-auto">
               Future research papers, literature reviews, and related documents will be published here as the project progresses.

@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { motion } from 'motion/react';
-import { Microscope, Dna, Activity, ArrowRight, HeartPulse, Target, ShieldCheck, Clock, Radar, ExternalLink, Camera } from 'lucide-react';
+import { Microscope, Dna, Activity, ArrowRight, HeartPulse, Target, ShieldCheck, Clock, Radar, ExternalLink, Camera, Sparkles } from 'lucide-react';
 import { TEAM_INFO, PROJECT_DETAILS, CRITERIA_OF_SUCCESS } from '../data';
 
 export default function Home() {
@@ -231,26 +231,27 @@ export default function Home() {
                   <span>Project Gallery & Field Records</span>
                 </div>
                 <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-white">
-                  Explore Official Meetings & Clinical Immersion
+                  Field Research, Ideation & Clinical Immersion
                 </h2>
                 <p className="text-slate-300 text-sm sm:text-base leading-relaxed">
-                  Browse verified photographic records from our clinical interview at Mulago Molecular Biology Labs, stakeholder meetings at Ruby Hospital, and weekly team coordination sprints documented in our Managerial Report.
+                  Browse verified photographic records from our 30/10/2026 HMW Ideation Session at the MakCHS Design Cube, clinical interviews at Mulago Molecular Biology Labs, and weekly sprint meetings documented in our Managerial Report.
                 </p>
               </div>
 
-              <div className="flex flex-wrap items-center gap-4 shrink-0">
+              <div className="flex flex-wrap items-center gap-3 shrink-0">
                 <Link
-                  to="/gallery?category=Meetings"
-                  className="px-6 py-3.5 rounded-xl bg-teal-500 hover:bg-teal-400 text-slate-950 font-bold text-sm transition-all shadow-lg inline-flex items-center space-x-2"
+                  to="/gallery?category=Research"
+                  className="px-5 py-3.5 rounded-xl bg-teal-500 hover:bg-teal-400 text-slate-950 font-bold text-sm transition-all shadow-lg inline-flex items-center space-x-2"
                 >
-                  <span>Open Meetings Gallery (7 Records)</span>
-                  <ArrowRight className="w-4 h-4" />
+                  <Sparkles className="w-4 h-4 text-slate-950" />
+                  <span>HMW Ideation (6 Photos)</span>
                 </Link>
                 <Link
-                  to="/gallery"
-                  className="px-6 py-3.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 font-semibold text-sm transition-all inline-flex items-center space-x-2"
+                  to="/gallery?category=Meetings"
+                  className="px-5 py-3.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 font-semibold text-sm transition-all inline-flex items-center space-x-2"
                 >
-                  <span>All Media</span>
+                  <span>Meetings (7 Records)</span>
+                  <ArrowRight className="w-4 h-4" />
                 </Link>
               </div>
             </div>

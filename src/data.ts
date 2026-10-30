@@ -444,12 +444,70 @@ export const GALLERY: GalleryItem[] = [
     description: "Team Avron's primary coordination platform on WhatsApp used for scheduling meetings, sending calendar invitations, coordinating agendas, and sharing meeting minutes as documented in Section 3.5 (Figure 3) of the Managerial Report."
   },
   {
-    id: "img-1",
-    url: "https://images.unsplash.com/photo-1581093458791-9f3c3900df4b?auto=format&fit=crop&q=80&w=800",
+    id: "gallery-research-hmw-ideation-overview",
+    url: "./gallery/hmw_ideation_overview.jpeg",
     category: "Research",
-    title: "Outdoor Environment Analysis",
-    date: "Sept 2026",
-    description: "Investigating obstacle profiles and hazard scenarios in outdoor environments."
+    title: "HMW Concept Generation & Ideation Workshop",
+    date: "30/10/2026",
+    badge: "HMW Ideation Session",
+    location: "Design Cube, Makerere University College of Health Sciences",
+    attendees: "Team Avron (Ebamu Misaki, Angel Ruth Nassanga, Mercy Nabusiita, Hope Jibril Tusubila)",
+    description: "Hands-on ideation session held on 30/10/2026 in the Design Cube at Makerere University College of Health Sciences. Team Avron gathered around the design workbench mapping out 'How Might We' (HMW) challenge questions on large flipcharts to transition from problem statements into tangible assistive device concepts."
+  },
+  {
+    id: "gallery-research-hmw-question-drafting",
+    url: "./gallery/hmw_ideation_drafting.jpeg",
+    category: "Research",
+    title: "Drafting 'How Might We' (HMW) Core Questions",
+    date: "30/10/2026",
+    badge: "HMW Formulation",
+    location: "Design Cube, Makerere University College of Health Sciences",
+    attendees: "Mercy Nabusiita, Angel Ruth Nassanga, Hope Jibril Tusubila, Ebamu Misaki",
+    description: "Team Avron systematically formulating and recording HMW challenge statements on poster paper. Topics focused on real-time obstacle alert modalities, wearable sensor positioning, power optimization, and weather-resistant enclosures for low-resource environments."
+  },
+  {
+    id: "gallery-research-hmw-criteria-alignment",
+    url: "./gallery/hmw_ideation_criteria.jpeg",
+    category: "Research",
+    title: "Criteria of Success & Technical Specs Alignment",
+    date: "30/10/2026",
+    badge: "Criteria Benchmarks",
+    location: "Design Cube, Makerere University College of Health Sciences",
+    attendees: "Hope Jibril Tusubila, Mercy Nabusiita, Angel Ruth Nassanga, Ebamu Misaki",
+    description: "Aligning creative HMW concept generation with strict engineering Criteria of Success: 0.3 m to 3.0 m detection range, ≤300 ms haptic latency, ≥120° coverage, ≥8 hours battery life, and high detection reliability (≥90%) in diverse outdoor lighting and weather conditions."
+  },
+  {
+    id: "gallery-research-hmw-architectural-debate",
+    url: "./gallery/hmw_ideation_discussion.jpeg",
+    category: "Research",
+    title: "Concept Exploration & Design Trade-Offs",
+    date: "30/10/2026",
+    badge: "Concept Generation",
+    location: "Design Cube, Makerere University College of Health Sciences",
+    attendees: "Angel Ruth Nassanga, Mercy Nabusiita, Ebamu Misaki, Hope Jibril Tusubila",
+    description: "Interactive debate and trade-off analysis evaluating different assistive device form factors: chest harness mount vs. smart belt vs. cane-clip attachment, prioritizing ergonomic comfort and intuitive directional vibration cues."
+  },
+  {
+    id: "gallery-research-hmw-cube-workshop",
+    url: "./gallery/hmw_ideation_synthesis.jpeg",
+    category: "Research",
+    title: "HMW Clustering in the MakCHS Design Cube",
+    date: "30/10/2026",
+    badge: "Design Cube MakCHS",
+    location: "Design Cube, Makerere University College of Health Sciences",
+    attendees: "Team Avron Members",
+    description: "Sprint session inside the Makerere University College of Health Sciences (MakCHS) Design Cube lab facility, clustering ideation prompts into subsystem work packages: sensor array, microcontroller processing, haptic actuators, and battery charging."
+  },
+  {
+    id: "gallery-research-hmw-concept-prioritization",
+    url: "./gallery/hmw_ideation_prioritization.jpeg",
+    category: "Research",
+    title: "Concept Prioritization & Sprint Wrap-Up",
+    date: "30/10/2026",
+    badge: "Concept Prioritization",
+    location: "Design Cube, Makerere University College of Health Sciences",
+    attendees: "Ebamu Misaki, Angel Ruth Nassanga, Mercy Nabusiita, Hope Jibril Tusubila",
+    description: "Synthesizing shortlisted concept architectures generated during the 30/10/2026 HMW sprint at MakCHS. Establishing milestones for CAD prototype drafting, circuit component selection, and upcoming supervisor review."
   },
   {
     id: "img-2",
