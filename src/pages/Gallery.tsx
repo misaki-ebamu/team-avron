@@ -19,12 +19,12 @@ import { cn } from '../utils';
 
 export default function Gallery() {
   const [searchParams, setSearchParams] = useSearchParams();
-  const initialCategory = searchParams.get('category') || 'Meetings';
+  const initialCategory = searchParams.get('category') || 'All';
   
   const [filter, setFilter] = useState<string>(
-    ['All', 'Meetings', 'Team', 'Research', 'Design', 'Prototype', 'Testing', 'Presentations'].includes(initialCategory)
+    ['All', 'Research', 'Meetings'].includes(initialCategory)
       ? initialCategory
-      : 'Meetings'
+      : 'All'
   );
   
   const [selectedImg, setSelectedImg] = useState<GalleryItem | null>(null);
@@ -32,7 +32,7 @@ export default function Gallery() {
   // Sync state with URL params
   useEffect(() => {
     const cat = searchParams.get('category');
-    if (cat && ['All', 'Meetings', 'Team', 'Research', 'Design', 'Prototype', 'Testing', 'Presentations'].includes(cat)) {
+    if (cat && ['All', 'Research', 'Meetings'].includes(cat)) {
       setFilter(cat);
     }
   }, [searchParams]);
@@ -53,7 +53,7 @@ export default function Gallery() {
     return currentSrc;
   };
 
-  const categories = ['Research', 'Meetings', 'All', 'Team', 'Design', 'Prototype', 'Testing', 'Presentations'];
+  const categories = ['All', 'Research', 'Meetings'];
 
   const filteredGallery = filter === 'All' 
     ? GALLERY 
@@ -150,7 +150,7 @@ export default function Gallery() {
                   )}
                 >
                   <span>
-                    {cat === 'Research' ? '🔬 Research' : cat === 'Meetings' ? '🤝 Meetings' : cat}
+                    {cat === 'Research' ? '🔬 Research (HMW Ideation)' : cat === 'Meetings' ? '🤝 Meetings & Stakeholders' : '📁 All Verified Photos'}
                   </span>
                   <span className={cn(
                     "text-xs px-2 py-0.5 rounded-full font-mono font-semibold",
@@ -162,6 +162,34 @@ export default function Gallery() {
               );
             })}
           </div>
+
+          {/* Section Description Card when All is selected */}
+          {filter === 'All' && (
+            <motion.div 
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              className="bg-white rounded-2xl p-6 md:p-8 mb-12 border border-slate-200/80 shadow-sm relative overflow-hidden"
+            >
+              <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-slate-100 pb-6 mb-6">
+                <div>
+                  <div className="inline-flex items-center space-x-1.5 text-teal-700 text-xs font-bold uppercase tracking-wider bg-teal-50 px-3 py-1 rounded-full border border-teal-200 mb-2">
+                    <CheckCircle2 className="w-3.5 h-3.5 text-teal-600" />
+                    <span>100% Authentic Project Evidence</span>
+                  </div>
+                  <h3 className="text-2xl font-bold text-slate-900">
+                    Team Avron Verified Documentation Archive
+                  </h3>
+                </div>
+                <div className="text-sm text-slate-600 bg-slate-50 border border-slate-200 px-4 py-2.5 rounded-xl flex items-center space-x-2">
+                  <span><strong>{GALLERY.length} Verified Photos</strong> across Research & Meetings</span>
+                </div>
+              </div>
+
+              <p className="text-slate-600 text-sm md:text-base leading-relaxed">
+                Visual archive containing only authentic, documented evidence of Team Avron's work: the <strong>30/10/2026 How Might We (HMW) Ideation Session</strong> at Makerere University College of Health Sciences Design Cube (6 photos) and official <strong>Clinical Immersion & Stakeholder Meeting records</strong> from Mulago Molecular Biology Labs, Ruby Hospital, and weekly sprint reviews (7 records).
+              </p>
+            </motion.div>
+          )}
 
           {/* Section Description Card when Research is selected */}
           {filter === 'Research' && (

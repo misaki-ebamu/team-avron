@@ -508,46 +508,6 @@ export const GALLERY: GalleryItem[] = [
     location: "Design Cube, Makerere University College of Health Sciences",
     attendees: "Ebamu Misaki, Angel Ruth Nassanga, Mercy Nabusiita, Hope Jibril Tusubila",
     description: "Synthesizing shortlisted concept architectures generated during the 30/10/2026 HMW sprint at MakCHS. Establishing milestones for CAD prototype drafting, circuit component selection, and upcoming supervisor review."
-  },
-  {
-    id: "img-2",
-    url: "https://images.unsplash.com/photo-1576086213369-97a306d36557?auto=format&fit=crop&q=80&w=800",
-    category: "Team",
-    title: "Criteria of Success Review",
-    date: "Oct 2026",
-    description: "Team Avron session defining quantitative engineering benchmarks and safety metrics."
-  },
-  {
-    id: "img-3",
-    url: "https://images.unsplash.com/photo-1581093588401-fbb62a02f120?auto=format&fit=crop&q=80&w=800",
-    category: "Design",
-    title: "Sensor Array Architecture",
-    date: "Oct 2026",
-    description: "Schematics for 120° horizontal field-of-view sensor alignment and alert triggers."
-  },
-  {
-    id: "img-4",
-    url: "https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?auto=format&fit=crop&q=80&w=800",
-    category: "Prototype",
-    title: "Haptic Feedback Integration",
-    date: "Nov 2026",
-    description: "Breadboard prototyping for real-time response (<300 ms) vibration cues."
-  },
-  {
-    id: "img-5",
-    url: "https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&q=80&w=800",
-    category: "Testing",
-    title: "Outdoor Daylight & Noise Testing",
-    date: "Dec 2026",
-    description: "Validation of obstacle detection reliability (≥90%) under outdoor conditions."
-  },
-  {
-    id: "img-6",
-    url: "https://images.unsplash.com/photo-1555664424-778a1e5e1b48?auto=format&fit=crop&q=80&w=800",
-    category: "Presentations",
-    title: "Departmental Milestone Defense",
-    date: "Dec 2026",
-    description: "Biomedical engineering final project presentation and evaluation."
   }
 ];
 
