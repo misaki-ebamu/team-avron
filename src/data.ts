@@ -353,14 +353,29 @@ export const RESOURCES: ResourceItem[] = [
   }
 ];
 
-export const GALLERY = [
+export interface GalleryItem {
+  id: string;
+  url: string;
+  category: 'Meetings' | 'Team' | 'Research' | 'Design' | 'Prototype' | 'Testing' | 'Presentations';
+  title: string;
+  date: string;
+  description: string;
+  badge?: string;
+  location?: string;
+  attendees?: string;
+}
+
+export const GALLERY: GalleryItem[] = [
   {
     id: "gallery-meeting-lab-interview",
     url: "./gallery/stakeholder_consultation_lab.jpeg",
     category: "Meetings",
     title: "Stakeholder Interview Meeting – Mulago Molecular Labs",
     date: "9 September 2026",
-    description: "Clinical client interview meeting with Mr. Raymond Kalema, Laboratory Technologist at Mulago Molecular Biology Labs (documented as Figure 4 in the Managerial Report). Team members Angel Ruth, Mercy, Misaki, and Hope discussed diagnostic workflows, laboratory equipment operations, and accessibility constraints."
+    badge: "Managerial Report Figure 4",
+    location: "Mulago Molecular Biology Labs",
+    attendees: "Mr. Raymond Kalema (Lab Technologist) & Team Avron (Angel Ruth, Mercy, Misaki, Hope)",
+    description: "Clinical client interview meeting with Mr. Raymond Kalema, Laboratory Technologist at Mulago Molecular Biology Labs (documented as Figure 4 in the Managerial Report). Team members discussed diagnostic workflows, laboratory equipment operations, and mobility constraints in medical environments."
   },
   {
     id: "gallery-meeting-lab-notes",
@@ -368,7 +383,10 @@ export const GALLERY = [
     category: "Meetings",
     title: "Needs Documentation & Note-Taking Meeting",
     date: "9 September 2026",
-    description: "Team Avron actively recording minutes and documenting unmet clinical needs during the in-person stakeholder consultation meeting with Mr. Raymond Kalema at Mulago Molecular Biology Labs."
+    badge: "Clinical Immersion Minutes",
+    location: "Mulago Molecular Biology Labs",
+    attendees: "Team Avron & Mr. Raymond Kalema",
+    description: "Team Avron actively recording minutes, documenting unmet clinical needs, and noting stakeholder workflow pain points during the in-person consultation meeting at Mulago Molecular Biology Labs."
   },
   {
     id: "gallery-meeting-lab-walkthrough",
@@ -376,7 +394,10 @@ export const GALLERY = [
     category: "Meetings",
     title: "Facility Walkthrough & Equipment Review Meeting",
     date: "9 September 2026",
-    description: "On-site clinical consultation and facility walkthrough with technologist Raymond Kalema reviewing sample storage, freezer facilities, and spatial layout navigation for visually impaired mobility."
+    badge: "Site & Space Assessment",
+    location: "Mulago Hospital Diagnostics Facility",
+    attendees: "Mr. Raymond Kalema & Team Avron",
+    description: "On-site clinical consultation and facility walkthrough with technologist Raymond Kalema inspecting sample storage units, ultra-low temperature freezer layouts, and physical navigation hazards."
   },
   {
     id: "gallery-meeting-ruby-online",
@@ -384,7 +405,10 @@ export const GALLERY = [
     category: "Meetings",
     title: "Online Stakeholder Meeting – Allan Rodin Gidoi (Ruby Hospital)",
     date: "9 September 2026",
-    description: "Virtual stakeholder interview meeting conducted via Google Meet with Allan Rodin Gidoi, Biomedical Engineer at Ruby Hospital Kampala. The session focused on medical device maintenance, spare parts sourcing, and low-resource healthcare needs."
+    badge: "Clinical Engineering Interview",
+    location: "Google Meet (Virtual)",
+    attendees: "Allan Rodin Gidoi (Biomedical Engineer, Ruby Hospital) & Team Avron",
+    description: "Virtual stakeholder interview meeting conducted via Google Meet with Biomedical Engineer Allan Rodin Gidoi from Ruby Hospital Kampala. The session focused on medical device maintenance, spare parts sourcing, and low-resource healthcare needs."
   },
   {
     id: "gallery-meeting-online-progress",
@@ -392,14 +416,20 @@ export const GALLERY = [
     category: "Meetings",
     title: "Team Avron Weekly Virtual Progress Meeting",
     date: "October 2026",
-    description: "Weekly internal team progress and coordination meeting held online via Google Meet (featuring Ebamu Misaki, Angel Ruth Nassanga, Hope Jibril, and Mercy Nabusiita) as documented in Section 3.3 (Figure 2) of the Managerial Report."
+    badge: "Managerial Report Figure 2",
+    location: "Google Meet (Online)",
+    attendees: "Ebamu Misaki, Angel Ruth Nassanga, Hope Jibril Tusubila, Mercy Nabusiita",
+    description: "Weekly internal team progress and sprint coordination meeting held online via Google Meet (featuring Ebamu Misaki, Angel Ruth Nassanga, Hope Jibril, and Mercy Nabusiita) as documented in Section 3.3 (Figure 2) of the Managerial Report."
   },
   {
     id: "gallery-meeting-online-review",
     url: "./gallery/managerial_online_meeting_2.jpg",
     category: "Meetings",
-    title: "Team Avron Milestone Alignment & Problem Statement Review",
+    title: "Milestone Alignment & Problem Statement Review",
     date: "October 2026",
+    badge: "Managerial Report Figure 2",
+    location: "Google Meet (Online)",
+    attendees: "Ebamu Misaki, Angel Ruth Nassanga, Hope Jibril Tusubila, Mercy Nabusiita",
     description: "Online milestone sync on Google Meet reviewing refined problem statements, criteria of success metrics, and presentation slide assignments as documented in Section 3.3 (Figure 2) of the Managerial Report."
   },
   {
@@ -408,6 +438,9 @@ export const GALLERY = [
     category: "Meetings",
     title: "Team Communication & Meeting Logistics Platform",
     date: "Semester 2026",
+    badge: "Managerial Report Figure 3",
+    location: "WhatsApp Official Coordination Group",
+    attendees: "Team Avron Members & Project Leads",
     description: "Team Avron's primary coordination platform on WhatsApp used for scheduling meetings, sending calendar invitations, coordinating agendas, and sharing meeting minutes as documented in Section 3.5 (Figure 3) of the Managerial Report."
   },
   {

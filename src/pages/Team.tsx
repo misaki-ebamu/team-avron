@@ -90,6 +90,26 @@ export default function Team() {
               </motion.div>
             ))}
           </div>
+
+          {/* Quick link to Team Meetings in Gallery */}
+          <div className="mt-20 bg-slate-900 rounded-3xl p-8 md:p-12 text-white flex flex-col md:flex-row items-center justify-between gap-6 shadow-xl">
+            <div className="space-y-2 text-center md:text-left">
+              <span className="text-xs font-bold uppercase tracking-wider text-teal-400 bg-teal-500/20 px-3 py-1 rounded-full border border-teal-500/30">
+                Official Clinical & Team Meetings
+              </span>
+              <h3 className="text-2xl font-bold text-white">See Team Avron in Action</h3>
+              <p className="text-slate-300 text-sm max-w-xl">
+                Explore our stakeholder interview meetings with Mulago Hospital laboratory technologists, virtual meetings with Ruby Hospital biomedical engineers, and weekly team sprints.
+              </p>
+            </div>
+            <a
+              href="#/gallery?category=Meetings"
+              className="shrink-0 px-6 py-3.5 rounded-xl bg-teal-500 hover:bg-teal-400 text-slate-950 font-bold text-sm transition-all shadow-lg inline-flex items-center space-x-2"
+            >
+              <span>View Meetings Gallery ({7} Photos)</span>
+              <span>→</span>
+            </a>
+          </div>
         </div>
       </section>
     </div>
