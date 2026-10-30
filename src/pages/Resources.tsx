@@ -72,12 +72,21 @@ export default function Resources() {
 
               <div className="flex flex-wrap items-center gap-3 shrink-0">
                 <a 
-                  href="./documents/TEAM_AVRON_TECHNICAL_REPORT.pdf"
+                  href="./documents/TEAM_AVRON_MIDSEMESTER_PRESENTATION.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center space-x-2 bg-teal-500 hover:bg-teal-400 text-slate-950 font-bold px-4 py-2.5 rounded-xl text-sm transition-all shadow-md"
                 >
-                  <BookOpen className="w-4 h-4" />
+                  <Presentation className="w-4 h-4" />
+                  <span>Mid-Sem Slides (20s)</span>
+                </a>
+                <a 
+                  href="./documents/TEAM_AVRON_TECHNICAL_REPORT.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center space-x-2 bg-slate-800 hover:bg-slate-700 text-teal-300 font-semibold px-4 py-2.5 rounded-xl text-sm border border-slate-700 transition-all"
+                >
+                  <BookOpen className="w-4 h-4 text-teal-400" />
                   <span>Technical Report (45p)</span>
                 </a>
                 <a 

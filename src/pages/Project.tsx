@@ -18,7 +18,8 @@ import {
   Download, 
   ExternalLink,
   FileCheck,
-  BookOpen
+  BookOpen,
+  Presentation
 } from 'lucide-react';
 
 const getCriterionIcon = (id: number) => {
@@ -91,6 +92,16 @@ export default function Project() {
               </p>
               <div className="flex flex-wrap items-center gap-3">
                 <a 
+                  href={PROJECT_DETAILS.presentationPdfUrl} 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center space-x-2 bg-teal-500 hover:bg-teal-400 text-slate-950 font-semibold px-4 py-2 rounded-xl text-sm transition-all shadow-sm"
+                >
+                  <Presentation className="w-4 h-4" />
+                  <span>Mid-Sem Slides (20s)</span>
+                  <ExternalLink className="w-3.5 h-3.5 opacity-70" />
+                </a>
+                <a 
                   href={PROJECT_DETAILS.technicalReportPdfUrl} 
                   target="_blank" 
                   rel="noopener noreferrer"
@@ -104,9 +115,9 @@ export default function Project() {
                   href={PROJECT_DETAILS.documentPdfUrl} 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="inline-flex items-center space-x-2 bg-teal-500 hover:bg-teal-400 text-slate-950 font-semibold px-4 py-2 rounded-xl text-sm transition-all shadow-sm"
+                  className="inline-flex items-center space-x-2 bg-slate-800 hover:bg-slate-700 text-white border border-slate-700 font-semibold px-4 py-2 rounded-xl text-sm transition-all shadow-sm"
                 >
-                  <FileCheck className="w-4 h-4" />
+                  <FileCheck className="w-4 h-4 text-teal-400" />
                   <span>Criteria of Success</span>
                   <ExternalLink className="w-3.5 h-3.5 opacity-70" />
                 </a>

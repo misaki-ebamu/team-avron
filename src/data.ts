@@ -96,6 +96,7 @@ export const PROJECT_DETAILS = {
   top3NeedsPdfUrl: "./documents/TEAM_AVRON_TOP_3_NEEDS.pdf",
   top10NeedsPdfUrl: "./documents/TEAM_AVRON_TOP_10_NEEDS.pdf",
   needs100PdfUrl: "./documents/TEAM_AVRON_100_NEEDS_ASSESSMENT.pdf",
+  presentationPdfUrl: "./documents/TEAM_AVRON_MIDSEMESTER_PRESENTATION.pdf",
   objectives: [
     "Quantify and document environmental hazards and navigation barriers faced by visually impaired individuals in low-resource outdoor settings.",
     "Design and develop a multi-sensor obstacle detection system sensing objects from 0.3 m to 3.0 m across a ≥120° horizontal field from knee to head level.",
@@ -345,11 +346,16 @@ export const RESOURCES: ResourceItem[] = [
   },
   { 
     id: "res-deck", 
-    title: "Project Milestone Presentation Deck", 
+    title: "Mid-Semester Presentation Deck", 
     type: "presentation",
     category: "Protocols & Research",
-    date: "October 2026",
-    description: "Comprehensive progress slides prepared for faculty supervisors Dr. Robert Ssekitoleko and Ms. Nalwoga Racheal for departmental review."
+    date: "16 October 2026",
+    description: "Official 20-slide Mid-Semester Presentation for Biomedical Engineering Design 1 delivered to faculty supervisors Dr. Robert Ssekitoleko and Ms. Nalwoga Racheal at Makerere University. Details clinical fieldwork, the 100-to-3 needs screening funnel (Regulatory, Technical Feasibility, Stanford 2x2, MAUT weighted matrix), and the validation roadmap for assistive obstacle detection.",
+    fileUrl: "./documents/TEAM_AVRON_MIDSEMESTER_PRESENTATION.pdf",
+    downloadName: "TEAM_AVRON_MIDSEMESTER_PRESENTATION.pdf",
+    badge: "OFFICIAL PRESENTATION DECK",
+    pages: "20 Slides",
+    fileSize: "787 KB"
   }
 ];
 
