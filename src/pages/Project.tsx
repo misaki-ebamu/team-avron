@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { motion } from 'motion/react';
 import { PageHeader } from '../components/PageHeader';
 import { PROJECT_DETAILS, CRITERIA_OF_SUCCESS } from '../data';
@@ -16,7 +17,8 @@ import {
   CloudRain, 
   Download, 
   ExternalLink,
-  FileCheck
+  FileCheck,
+  BookOpen
 } from 'lucide-react';
 
 const getCriterionIcon = (id: number) => {
@@ -69,9 +71,14 @@ export default function Project() {
           >
             <div className="absolute top-0 right-0 translate-x-8 -translate-y-8 w-48 h-48 bg-teal-500/10 rounded-full blur-2xl pointer-events-none" />
             
-            <div className="flex items-center space-x-3 text-teal-400 font-semibold text-sm tracking-wider uppercase mb-4">
-              <HeartPulse className="w-5 h-5 text-teal-400" />
-              <span>Core Need Statement</span>
+            <div className="flex flex-wrap items-center justify-between gap-3 mb-4">
+              <div className="flex items-center space-x-3 text-teal-400 font-semibold text-sm tracking-wider uppercase">
+                <HeartPulse className="w-5 h-5 text-teal-400" />
+                <span>Core Need Statement</span>
+              </div>
+              <span className="text-xs text-teal-300 bg-teal-950/80 border border-teal-800/60 px-3 py-1 rounded-full font-medium">
+                Supervised by {PROJECT_DETAILS.supervisors}
+              </span>
             </div>
             
             <blockquote className="text-2xl sm:text-3xl font-light text-slate-100 leading-relaxed italic border-l-4 border-teal-400 pl-6 my-4">
@@ -80,18 +87,36 @@ export default function Project() {
 
             <div className="mt-6 flex flex-wrap items-center justify-between gap-4 pt-4 border-t border-slate-800">
               <p className="text-sm text-slate-400">
-                Focus Area: <span className="text-slate-200 font-medium">Assistive Mobility & Environmental Hazard Detection</span>
+                Department: <span className="text-slate-200 font-medium">{PROJECT_DETAILS.department}, {PROJECT_DETAILS.institution}</span>
               </p>
-              <a 
-                href={PROJECT_DETAILS.documentPdfUrl} 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="inline-flex items-center space-x-2 bg-teal-500 hover:bg-teal-400 text-slate-950 font-semibold px-4 py-2 rounded-xl text-sm transition-all"
-              >
-                <FileCheck className="w-4 h-4" />
-                <span>View Criteria of Success PDF</span>
-                <ExternalLink className="w-3.5 h-3.5 opacity-70" />
-              </a>
+              <div className="flex flex-wrap items-center gap-3">
+                <a 
+                  href={PROJECT_DETAILS.technicalReportPdfUrl} 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center space-x-2 bg-slate-800 hover:bg-slate-700 text-teal-300 border border-teal-500/40 font-semibold px-4 py-2 rounded-xl text-sm transition-all shadow-sm"
+                >
+                  <BookOpen className="w-4 h-4 text-teal-400" />
+                  <span>Technical Report (45p)</span>
+                  <ExternalLink className="w-3.5 h-3.5 opacity-70" />
+                </a>
+                <a 
+                  href={PROJECT_DETAILS.documentPdfUrl} 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center space-x-2 bg-teal-500 hover:bg-teal-400 text-slate-950 font-semibold px-4 py-2 rounded-xl text-sm transition-all shadow-sm"
+                >
+                  <FileCheck className="w-4 h-4" />
+                  <span>Criteria of Success</span>
+                  <ExternalLink className="w-3.5 h-3.5 opacity-70" />
+                </a>
+                <Link
+                  to="/resources"
+                  className="inline-flex items-center space-x-1 text-slate-400 hover:text-teal-300 text-xs font-semibold px-2 py-2 transition-colors"
+                >
+                  <span>All Documents →</span>
+                </Link>
+              </div>
             </div>
           </motion.div>
         </div>

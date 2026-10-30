@@ -83,11 +83,19 @@ export const TEAM_MEMBERS: TeamMember[] = [
 
 export const PROJECT_DETAILS = {
   title: "Assistive Hazard Detection for Visually Impaired Independent Mobility",
-  shortTitle: "Assistive Mobility Hazard Detector",
+  shortTitle: "Assistive Hazard Detection",
+  institution: "Makerere University",
+  department: "Department of Biomedical Sciences and Engineering",
+  supervisors: "Dr. Robert Ssekitoleko & Ms. Nalwoga Racheal",
   problem: "Visually impaired individuals navigating low-resource outdoor environments face severe safety hazards and barriers to independent mobility. Traditional mobility aids like the standard white cane only detect obstacles at ground level within immediate physical sweep and cannot alert users to head-level obstacles, sudden drop-offs, open drains, puddles, or fast-approaching dynamic hazards such as vehicles and cyclists. In low-resource settings characterized by uneven terrain, unpaved paths, irregular walkways, and high ambient daylight or noise, these limitations lead to frequent collisions, disorientation, physical injury, and a significant reduction in personal independence.",
   need: "Visually impaired individuals navigating low-resource outdoor environments need real-time detection of environmental hazards to support independent mobility.",
   proposedSolution: "Team Avron is developing an intelligent, multimodal assistive biomedical device tailored for low-resource outdoor environments. The system delivers multi-zone real-time hazard detection covering 0.3 m to 3.0 m across a ≥120° field of view, detecting both static hazards (from knee to head height) and fast-approaching dynamic objects. It converts environmental hazard data into intuitive, distinct tactile and auditory feedback that differentiates hazard categories and distance bands. Engineered for outdoor resilience (IP54 weather resistance), rapid response (≤300 ms alert latency), long endurance (≥8 hours continuous runtime), and strict biomedical safety compliance (ISO 14971-style risk management with biocompatible materials).",
   documentPdfUrl: "./documents/TEAM_AVRON_CRITERIA_OF_SUCCESS.pdf",
+  technicalReportPdfUrl: "./documents/TEAM_AVRON_TECHNICAL_REPORT.pdf",
+  managerialReportPdfUrl: "./documents/TEAM_AVRON_MANAGERIAL_REPORT.pdf",
+  top3NeedsPdfUrl: "./documents/TEAM_AVRON_TOP_3_NEEDS.pdf",
+  top10NeedsPdfUrl: "./documents/TEAM_AVRON_TOP_10_NEEDS.pdf",
+  needs100PdfUrl: "./documents/TEAM_AVRON_100_NEEDS_ASSESSMENT.pdf",
   objectives: [
     "Quantify and document environmental hazards and navigation barriers faced by visually impaired individuals in low-resource outdoor settings.",
     "Design and develop a multi-sensor obstacle detection system sensing objects from 0.3 m to 3.0 m across a ≥120° horizontal field from knee to head level.",
@@ -226,63 +234,122 @@ export const PROJECT_JOURNEY = [
   }
 ];
 
-export const RESOURCES = [
+export interface ResourceItem {
+  id: string;
+  title: string;
+  type: 'document' | 'link' | 'presentation' | 'image';
+  category: 'Official Reports' | 'Needs Assessment' | 'Engineering Criteria' | 'Protocols & Research';
+  date: string;
+  description: string;
+  fileUrl?: string;
+  downloadName?: string;
+  badge?: string;
+  pages?: string;
+  fileSize?: string;
+}
+
+export const RESOURCES: ResourceItem[] = [
   { 
-    id: "res-0", 
-    title: "Team Avron Criteria of Success & Need Specification", 
+    id: "res-tech-report", 
+    title: "Team Avron: Technical Report", 
     type: "document",
+    category: "Official Reports",
     date: "October 2026",
-    description: "Official specification defining our 10 measurable criteria of success, target metrics, and need statement.",
-    fileUrl: "./documents/TEAM_AVRON_CRITERIA_OF_SUCCESS.pdf"
+    description: "Official 45-page Biomedical Engineering Technical Report detailing clinical immersion at Mulago, Kawempe, and Ruby hospitals, the 100-to-3 needs screening funnel, MAUT decision matrices, clinical stakeholder feedback, and engineering requirements.",
+    fileUrl: "./documents/TEAM_AVRON_TECHNICAL_REPORT.pdf",
+    downloadName: "TEAM_AVRON_TECHNICAL_REPORT.pdf",
+    badge: "OFFICIAL TECHNICAL REPORT",
+    pages: "45 Pages",
+    fileSize: "1.1 MB"
   },
   { 
-    id: "res-1", 
-    title: "Project Proposal & Needs Assessment", 
+    id: "res-mgmt-report", 
+    title: "Team Avron: Management Report", 
     type: "document",
-    date: "August 2026",
-    description: "Overview of low-resource outdoor environmental hazard challenges for visually impaired individuals."
+    category: "Official Reports",
+    date: "October 2026",
+    description: "Official 37-page Project Management Report covering Work Breakdown Structure (WBS), Gantt scheduling, Earned Value Analysis (EVA), stakeholder engagement, team constitution, code of conduct, risk governance, and meeting minutes.",
+    fileUrl: "./documents/TEAM_AVRON_MANAGERIAL_REPORT.pdf",
+    downloadName: "TEAM_AVRON_MANAGERIAL_REPORT.pdf",
+    badge: "OFFICIAL MANAGEMENT REPORT",
+    pages: "37 Pages",
+    fileSize: "809 KB"
   },
   { 
-    id: "res-2", 
-    title: "Literature Review on Assistive Mobility Devices", 
+    id: "res-criteria", 
+    title: "Criteria of Success & Need Specification", 
     type: "document",
+    category: "Engineering Criteria",
+    date: "October 2026",
+    description: "Official engineering benchmark defining our 10 measurable criteria of success (≥90% detection reliability, ≤300ms latency, 0.3m–3.0m range, IP54 weather seal, SUS ≥ 70) and quantitative validation protocols.",
+    fileUrl: "./documents/TEAM_AVRON_CRITERIA_OF_SUCCESS.pdf",
+    downloadName: "TEAM_AVRON_CRITERIA_OF_SUCCESS.pdf",
+    badge: "CRITERIA SPECIFICATION",
+    pages: "3 Pages",
+    fileSize: "206 KB"
+  },
+  { 
+    id: "res-top3", 
+    title: "Top 3 Priority Needs Report", 
+    type: "document",
+    category: "Needs Assessment",
     date: "September 2026",
-    description: "State-of-the-art review on electronic travel aids, sensor modalities, and limitations of existing white canes."
+    description: "In-depth clinical justification and comparative analysis for our top 3 shortlisted clinical needs: (1) Hazard Detection for Visually Impaired, (2) Non-invasive Hypoglycemia Screening, and (3) Low-cost Cardiac Surgery Simulation.",
+    fileUrl: "./documents/TEAM_AVRON_TOP_3_NEEDS.pdf",
+    downloadName: "TEAM_AVRON_TOP_3_NEEDS.pdf",
+    badge: "TOP 3 SHORTLIST",
+    pages: "3 Pages",
+    fileSize: "80 KB"
   },
   { 
-    id: "res-3", 
-    title: "Sensor Evaluation & Outdoor Benchmark Research", 
-    type: "link",
-    date: "October 2026",
-    description: "Comparison of ultrasonic, LiDAR, and optical sensors in ambient daylight and weather conditions."
+    id: "res-top10", 
+    title: "Top 10 Needs Selection & MAUT Analysis", 
+    type: "document",
+    category: "Needs Assessment",
+    date: "September 2026",
+    description: "Multi-Attribute Utility Theory (MAUT) decision matrix and multi-factorial scoring (clinical impact, technical feasibility, low-resource viability, affordability) that selected the top ten clinical needs.",
+    fileUrl: "./documents/TEAM_AVRON_TOP_10_NEEDS.pdf",
+    downloadName: "TEAM_AVRON_TOP_10_NEEDS.pdf",
+    badge: "MAUT DECISION MATRIX",
+    pages: "1 Page",
+    fileSize: "24 KB"
   },
   { 
-    id: "res-4", 
+    id: "res-100", 
+    title: "Master Catalog of 100+ Refined Need Statements", 
+    type: "document",
+    category: "Needs Assessment",
+    date: "September 2026",
+    description: "Master reference list of 103 refined biomedical need statements across 4 core clinical disciplines, formulated during clinical immersion across Mulago National Referral, Kawempe Specialized Hospital, and Ruby Medical Center.",
+    fileUrl: "./documents/TEAM_AVRON_100_NEEDS_ASSESSMENT.pdf",
+    downloadName: "TEAM_AVRON_100_NEEDS_ASSESSMENT.pdf",
+    badge: "100+ NEEDS MASTER LIST",
+    pages: "5 Pages",
+    fileSize: "70 KB"
+  },
+  { 
+    id: "res-iso", 
     title: "ISO 14971 Risk Management & Safety Dossier", 
     type: "document",
+    category: "Protocols & Research",
     date: "Draft",
-    description: "Identification and mitigation of electrical, biocompatibility, and operational risk factors."
+    description: "Biomedical device risk identification evaluating electrical safety, user fall mitigation, acoustic alert thresholds, and biocompatible contact materials."
   },
   { 
-    id: "res-5", 
-    title: "Multimodal Haptic & Auditory Feedback Protocols", 
-    type: "document",
-    date: "Draft",
-    description: "Frequency and pulse pattern mapping for distinct ground, trunk, and head hazard discrimination."
-  },
-  { 
-    id: "res-6", 
+    id: "res-sus", 
     title: "System Usability Scale (SUS) Evaluation Protocol", 
     type: "document",
+    category: "Protocols & Research",
     date: "Planning",
-    description: "Testing methodology with 7-10 participants targeting SUS ≥ 70 and zero critical use errors."
+    description: "Standardized evaluation protocol with 7–10 participants with visual impairments targeting SUS ≥ 70 and zero critical use errors."
   },
   { 
-    id: "res-7", 
+    id: "res-deck", 
     title: "Project Milestone Presentation Deck", 
     type: "presentation",
+    category: "Protocols & Research",
     date: "October 2026",
-    description: "Comprehensive progress slides prepared for faculty advisors and biomedical departmental review."
+    description: "Comprehensive progress slides prepared for faculty supervisors Dr. Robert Ssekitoleko and Ms. Nalwoga Racheal for departmental review."
   }
 ];
 
