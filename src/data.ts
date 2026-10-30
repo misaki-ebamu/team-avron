@@ -355,6 +355,62 @@ export const RESOURCES: ResourceItem[] = [
 
 export const GALLERY = [
   {
+    id: "gallery-meeting-lab-interview",
+    url: "./gallery/stakeholder_consultation_lab.jpeg",
+    category: "Meetings",
+    title: "Stakeholder Interview Meeting – Mulago Molecular Labs",
+    date: "9 September 2026",
+    description: "Clinical client interview meeting with Mr. Raymond Kalema, Laboratory Technologist at Mulago Molecular Biology Labs (documented as Figure 4 in the Managerial Report). Team members Angel Ruth, Mercy, Misaki, and Hope discussed diagnostic workflows, laboratory equipment operations, and accessibility constraints."
+  },
+  {
+    id: "gallery-meeting-lab-notes",
+    url: "./gallery/requirements_gathering_lab.jpeg",
+    category: "Meetings",
+    title: "Needs Documentation & Note-Taking Meeting",
+    date: "9 September 2026",
+    description: "Team Avron actively recording minutes and documenting unmet clinical needs during the in-person stakeholder consultation meeting with Mr. Raymond Kalema at Mulago Molecular Biology Labs."
+  },
+  {
+    id: "gallery-meeting-lab-walkthrough",
+    url: "./gallery/facility_equipment_walkthrough.jpeg",
+    category: "Meetings",
+    title: "Facility Walkthrough & Equipment Review Meeting",
+    date: "9 September 2026",
+    description: "On-site clinical consultation and facility walkthrough with technologist Raymond Kalema reviewing sample storage, freezer facilities, and spatial layout navigation for visually impaired mobility."
+  },
+  {
+    id: "gallery-meeting-ruby-online",
+    url: "./gallery/team_virtual_sprint_meeting.jpeg",
+    category: "Meetings",
+    title: "Online Stakeholder Meeting – Allan Rodin Gidoi (Ruby Hospital)",
+    date: "9 September 2026",
+    description: "Virtual stakeholder interview meeting conducted via Google Meet with Allan Rodin Gidoi, Biomedical Engineer at Ruby Hospital Kampala. The session focused on medical device maintenance, spare parts sourcing, and low-resource healthcare needs."
+  },
+  {
+    id: "gallery-meeting-online-progress",
+    url: "./gallery/managerial_online_meeting_1.jpg",
+    category: "Meetings",
+    title: "Team Avron Weekly Virtual Progress Meeting",
+    date: "October 2026",
+    description: "Weekly internal team progress and coordination meeting held online via Google Meet (featuring Ebamu Misaki, Angel Ruth Nassanga, Hope Jibril, and Mercy Nabusiita) as documented in Section 3.3 (Figure 2) of the Managerial Report."
+  },
+  {
+    id: "gallery-meeting-online-review",
+    url: "./gallery/managerial_online_meeting_2.jpg",
+    category: "Meetings",
+    title: "Team Avron Milestone Alignment & Problem Statement Review",
+    date: "October 2026",
+    description: "Online milestone sync on Google Meet reviewing refined problem statements, criteria of success metrics, and presentation slide assignments as documented in Section 3.3 (Figure 2) of the Managerial Report."
+  },
+  {
+    id: "gallery-meeting-comms-platform",
+    url: "./gallery/managerial_team_communication.jpg",
+    category: "Meetings",
+    title: "Team Communication & Meeting Logistics Platform",
+    date: "Semester 2026",
+    description: "Team Avron's primary coordination platform on WhatsApp used for scheduling meetings, sending calendar invitations, coordinating agendas, and sharing meeting minutes as documented in Section 3.5 (Figure 3) of the Managerial Report."
+  },
+  {
     id: "img-1",
     url: "https://images.unsplash.com/photo-1581093458791-9f3c3900df4b?auto=format&fit=crop&q=80&w=800",
     category: "Research",
