@@ -362,13 +362,15 @@ export const RESOURCES: ResourceItem[] = [
 export interface GalleryItem {
   id: string;
   url: string;
-  category: 'Meetings' | 'Team' | 'Research' | 'Design' | 'Prototype' | 'Testing' | 'Presentations';
+  category: 'Team' | 'Research' | 'Meetings' | 'Design' | 'Prototype' | 'Testing' | 'Presentations';
   title: string;
   date: string;
   description: string;
   badge?: string;
   location?: string;
   attendees?: string;
+  isPlaceholder?: boolean;
+  documentUrl?: string;
 }
 
 export const GALLERY: GalleryItem[] = [
@@ -514,6 +516,115 @@ export const GALLERY: GalleryItem[] = [
     location: "Design Cube, Makerere University College of Health Sciences",
     attendees: "Ebamu Misaki, Angel Ruth Nassanga, Mercy Nabusiita, Hope Jibril Tusubila",
     description: "Synthesizing shortlisted concept architectures generated during the 30/10/2026 HMW sprint at MakCHS. Establishing milestones for CAD prototype drafting, circuit component selection, and upcoming supervisor review."
+  },
+  {
+    id: "gallery-team-working-session",
+    url: "",
+    category: "Team",
+    title: "Team Avron Engineering Collaboration & Studio Sessions",
+    date: "Semester 2026",
+    badge: "Awaiting Photo Upload",
+    location: "Biomedical Engineering Labs, Makerere University",
+    attendees: "Ebamu Misaki, Angel Ruth Nassanga, Mercy Nabusiita, Hope Jibril Tusubila",
+    description: "Team working sessions, lab workspace collaboration, and engineering portraits. Dedicated photo slot reserved for Team Avron to upload authentic team documentation.",
+    isPlaceholder: true
+  },
+  {
+    id: "gallery-design-cad-enclosure",
+    url: "",
+    category: "Design",
+    title: "Wearable Ergonomic Enclosure & 3D CAD Modeling",
+    date: "October – November 2026",
+    badge: "CAD Schematics • Slot Reserved",
+    location: "MakCHS Design Cube / CAD Studio",
+    attendees: "Team Avron Design Leads",
+    description: "3D CAD dimensional models, chest/torso wearable ergonomics, modular sensor brackets, and weatherproof housing schematics targeting IP54 ingress protection.",
+    isPlaceholder: true
+  },
+  {
+    id: "gallery-design-sensor-optics",
+    url: "",
+    category: "Design",
+    title: "Transducer Array Geometry & Beam Angle Simulations",
+    date: "October – November 2026",
+    badge: "Optics & Raycasting • Slot Reserved",
+    location: "Makerere University College of Health Sciences",
+    attendees: "Team Avron",
+    description: "Raycaster simulations and sensor array triangulation establishing ≥120° horizontal detection coverage with minimum blind spots between 0.3 m and 3.0 m.",
+    isPlaceholder: true
+  },
+  {
+    id: "gallery-prototype-benchtop-circuit",
+    url: "",
+    category: "Prototype",
+    title: "Benchtop Microcontroller & Distance Sensing Circuit",
+    date: "November 2026",
+    badge: "Hardware Breadboard • Slot Reserved",
+    location: "Biomedical Engineering Laboratory, MakCHS",
+    attendees: "Team Avron Hardware Integration Leads",
+    description: "Microcontroller circuit assembly on solderless breadboards interfacing distance transducers with tactile driver ICs and real-time threshold interrupt firmware.",
+    isPlaceholder: true
+  },
+  {
+    id: "gallery-prototype-wearable-assembly",
+    url: "",
+    category: "Prototype",
+    title: "Wearable Harness Assembly & Power Subsystem",
+    date: "November 2026",
+    badge: "Wearable Hardware • Slot Reserved",
+    location: "Biomedical Engineering Laboratory, MakCHS",
+    attendees: "Team Avron",
+    description: "Integration of rechargeable lithium battery pack, buck-boost voltage regulation, tactile haptic actuators, and user control switches onto the wearable vest/belt harness.",
+    isPlaceholder: true
+  },
+  {
+    id: "gallery-testing-detection-range",
+    url: "",
+    category: "Testing",
+    title: "Hazard Detection Range & Boundary Verification (0.3m – 3.0m)",
+    date: "November – December 2026",
+    badge: "Validation Testing • Slot Reserved",
+    location: "Makerere University Campus & Low-Resource Walkways",
+    attendees: "Team Avron Validation Team",
+    description: "Systematic distance accuracy and detection reliability benchmarking across flat obstacles, drop-offs, potholes, and varied lighting conditions adhering to ≥90% detection reliability targets.",
+    isPlaceholder: true
+  },
+  {
+    id: "gallery-testing-haptic-latency",
+    url: "",
+    category: "Testing",
+    title: "Haptic Response Latency & Safety Protocol Verification (≤300ms)",
+    date: "November – December 2026",
+    badge: "Latency & Usability • Slot Reserved",
+    location: "Clinical Simulation & Field Test Course",
+    attendees: "Team Avron & Clinical Evaluators",
+    description: "Oscilloscope and timer verification measuring latency from obstacle encounter to haptic alert vibration (≤300ms target), adhering to ISO 14971 risk mitigations and SUS ≥ 70 protocol.",
+    isPlaceholder: true
+  },
+  {
+    id: "gallery-presentation-midsemester-defense",
+    url: "",
+    category: "Presentations",
+    title: "Mid-Semester Presentation Deck – Biomedical Engineering Design 1",
+    date: "16 October 2026",
+    badge: "Mid-Semester Defense • Official Deck",
+    location: "Makerere University College of Health Sciences",
+    attendees: "Supervisors: Dr. Robert Ssekitoleko & Ms. Nalwoga Racheal; Team Avron",
+    description: "Official 20-slide presentation delivered to academic supervisors detailing clinical needs-finding (100 to 3 screening funnel: Regulatory, Feasibility, Stanford 2x2, MAUT) and the engineering roadmap for assistive hazard detection.",
+    documentUrl: "./documents/TEAM_AVRON_MIDSEMESTER_PRESENTATION.pdf",
+    isPlaceholder: true
+  },
+  {
+    id: "gallery-presentation-final-defense",
+    url: "",
+    category: "Presentations",
+    title: "Final Design Concept & Working Prototype Defense",
+    date: "Upcoming Milestone",
+    badge: "Academic Defense • Slot Reserved",
+    location: "Makerere University Department of Biomedical Sciences & Engineering",
+    attendees: "Academic Supervisors, External Examiners & Team Avron",
+    description: "Upcoming final design concept presentation and working prototype demonstration. High-resolution presentation photos and slides will be uploaded following the review.",
+    isPlaceholder: true
   }
 ];
 
