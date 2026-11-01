@@ -76,7 +76,7 @@ export const TEAM_MEMBERS: TeamMember[] = [
     responsibilities: "Driving technical development, hardware architecture, embedded firmware, sensor fusion, and leading the prototyping phase.",
     bio: "Jibril is a creative problem-solver focused on technology development. He leads the technical innovation of the project, turning research concepts into tangible, functional biomedical engineering prototypes.",
     photoUrl: "./JIBRIL.jpeg",
-    linkedin: "#",
+    linkedin: "https://www.linkedin.com/in/hope-jibril-279413382",
     email: "thopejibril@gmail.com"
   }
 ];
