@@ -66,24 +66,37 @@ export default function Team() {
                     </div>
                   </div>
 
-                  <div className="mt-8 flex gap-4">
-                    <a 
-                      href={member.linkedin} 
-                      target="_blank" 
-                      rel="noopener noreferrer" 
-                      className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-slate-50 text-slate-600 hover:bg-slate-900 hover:text-white transition-colors border border-slate-200"
-                      title="LinkedIn Profile"
-                      aria-label={`${member.name} LinkedIn`}
-                    >
-                      <Linkedin className="w-5 h-5" />
-                    </a>
+                  <div className="mt-8 flex items-center gap-3">
+                    {member.linkedin && member.linkedin !== '#' ? (
+                      <a 
+                        href={member.linkedin.startsWith('http') ? member.linkedin : `https://${member.linkedin}`} 
+                        target="_blank" 
+                        rel="noopener noreferrer" 
+                        className="inline-flex items-center space-x-2 px-4 py-2.5 rounded-full bg-blue-50 text-[#0077b5] hover:bg-[#0077b5] hover:text-white transition-all border border-blue-200 shadow-sm font-medium text-sm group"
+                        title={`View ${member.name}'s LinkedIn Profile`}
+                        aria-label={`${member.name} LinkedIn Profile`}
+                      >
+                        <Linkedin className="w-4 h-4 fill-current group-hover:scale-110 transition-transform" />
+                        <span>LinkedIn</span>
+                      </a>
+                    ) : (
+                      <span 
+                        className="inline-flex items-center space-x-2 px-4 py-2.5 rounded-full bg-slate-100 text-slate-400 border border-slate-200 text-sm font-medium cursor-not-allowed"
+                        title="LinkedIn Profile coming soon"
+                      >
+                        <Linkedin className="w-4 h-4" />
+                        <span>LinkedIn</span>
+                      </span>
+                    )}
+
                     <button 
                       onClick={() => window.open(`https://mail.google.com/mail/?view=cm&fs=1&to=${member.email}`, '_blank', 'noopener,noreferrer')}
-                      className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-slate-50 text-slate-600 hover:bg-slate-900 hover:text-white transition-colors border border-slate-200 cursor-pointer"
-                      title="Send Email"
+                      className="inline-flex items-center space-x-2 px-4 py-2.5 rounded-full bg-slate-50 text-slate-700 hover:bg-slate-900 hover:text-white transition-all border border-slate-200 text-sm font-medium cursor-pointer shadow-sm"
+                      title="Send Email via Gmail"
                       aria-label={`Send email to ${member.name}`}
                     >
-                      <Mail className="w-5 h-5" />
+                      <Mail className="w-4 h-4" />
+                      <span>Email</span>
                     </button>
                   </div>
                 </div>

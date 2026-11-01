@@ -50,7 +50,7 @@ export const TEAM_MEMBERS: TeamMember[] = [
     responsibilities: "Leading literature reviews, designing research methodologies, hazard characterization, and ensuring the scientific and clinical validity of the project.",
     bio: "Misaki specializes in clinical research and data-driven problem solving. He is committed to bridging the gap between clinical needs and engineering solutions through rigorous research and systematic analysis.",
     photoUrl: "./MISAKI.jpeg",
-    linkedin: "#",
+    linkedin: "https://www.linkedin.com/in/ebamu-misaki-429026352",
     email: "ebamumisaki@gmail.com"
   },
   {
