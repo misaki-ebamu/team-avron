@@ -1,9 +1,11 @@
 import { motion } from 'motion/react';
 import { PageHeader } from '../components/PageHeader';
-import { TEAM_MEMBERS } from '../data';
+import { TEAM_MEMBERS, GALLERY } from '../data';
 import { Linkedin, Mail, GraduationCap } from 'lucide-react';
 
 export default function Team() {
+  const meetingsCount = GALLERY.filter(item => item.category === 'Meetings' && !item.isPlaceholder).length;
+
   return (
     <div className="w-full">
       <PageHeader 
@@ -119,7 +121,7 @@ export default function Team() {
               href="#/gallery?category=Meetings"
               className="shrink-0 px-6 py-3.5 rounded-xl bg-teal-500 hover:bg-teal-400 text-slate-950 font-bold text-sm transition-all shadow-lg inline-flex items-center space-x-2"
             >
-              <span>View Meetings Gallery ({7} Photos)</span>
+              <span>View Meetings Gallery ({meetingsCount} Photos)</span>
               <span>→</span>
             </a>
           </div>

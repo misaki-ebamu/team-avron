@@ -452,6 +452,39 @@ export const GALLERY: GalleryItem[] = [
     description: "Team Avron's primary coordination platform on WhatsApp used for scheduling meetings, sending calendar invitations, coordinating agendas, and sharing meeting minutes as documented in Section 3.5 (Figure 3) of the Managerial Report."
   },
   {
+    id: "gallery-meeting-pharmacy-hmw-answering",
+    url: "./gallery/concept_generation_hmw_pharmacy_1.jpeg",
+    category: "Meetings",
+    title: "Concept Generation Meeting – Answering HMW Questions",
+    date: "03/11/2026",
+    badge: "School of Pharmacy Sprint",
+    location: "School of Pharmacy, Makerere University",
+    attendees: "Team Avron (Ebamu Misaki, Hope Jibril, Angel Ruth Nassanga, Nabusiita Mercy)",
+    description: "In-person team meeting at the School of Pharmacy, Makerere University held on 03/11/2026 to continue with concept generation. The team collaboratively answered the 'How Might We' (HMW) challenge questions generated in the previous ideation session, formulating concrete engineering solutions on large poster sheets."
+  },
+  {
+    id: "gallery-meeting-pharmacy-concept-synthesis",
+    url: "./gallery/concept_generation_hmw_pharmacy_2.jpeg",
+    category: "Meetings",
+    title: "HMW Solution Mapping & Technical Exploration",
+    date: "03/11/2026",
+    badge: "Concept Development",
+    location: "School of Pharmacy, Makerere University",
+    attendees: "Team Avron (Ebamu Misaki, Hope Jibril, Angel Ruth Nassanga, Nabusiita Mercy)",
+    description: "Team Avron reviewing laptop research files and mapping candidate components to address specific HMW queries, including ultrasonic and LiDAR sensor placement, haptic actuator feedback, and rechargeable power management."
+  },
+  {
+    id: "gallery-meeting-pharmacy-architecture-deliberation",
+    url: "./gallery/concept_generation_hmw_pharmacy_3.jpeg",
+    category: "Meetings",
+    title: "Active Solution Review & Subsystem Alignment",
+    date: "03/11/2026",
+    badge: "Solution Architecture",
+    location: "School of Pharmacy, Makerere University",
+    attendees: "Team Avron (Ebamu Misaki, Hope Jibril, Angel Ruth Nassanga, Nabusiita Mercy)",
+    description: "Deliberation and concept evaluation session at the School of Pharmacy examining trade-offs across user comfort, real-time alert latency (≤300 ms), and weather resistance for visually impaired independent navigation in low-resource environments."
+  },
+  {
     id: "gallery-research-hmw-ideation-overview",
     url: "./gallery/hmw_ideation_overview.jpeg",
     category: "Research",

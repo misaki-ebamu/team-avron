@@ -67,6 +67,9 @@ export default function Gallery() {
     if (currentSrc.includes('hmw_ideation_discussion')) return './assets/aistudio/4_82381e64.jpeg';
     if (currentSrc.includes('hmw_ideation_synthesis')) return './assets/aistudio/5_8be59267.jpeg';
     if (currentSrc.includes('hmw_ideation_prioritization')) return './assets/aistudio/6_3a7afd15.jpeg';
+    if (currentSrc.includes('concept_generation_hmw_pharmacy_1')) return './assets/aistudio/a_bb79a9b9.jpeg';
+    if (currentSrc.includes('concept_generation_hmw_pharmacy_2')) return './assets/aistudio/b_24f9be68.jpeg';
+    if (currentSrc.includes('concept_generation_hmw_pharmacy_3')) return './assets/aistudio/e_1f0d0170.jpeg';
     if (currentSrc.includes('./gallery/')) return currentSrc.replace('./gallery/', '/gallery/');
     return currentSrc;
   };
