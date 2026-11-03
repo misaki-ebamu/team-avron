@@ -63,7 +63,7 @@ export const TEAM_MEMBERS: TeamMember[] = [
     responsibilities: "Documenting meetings, managing project reports, organizing resources, drafting risk management files, and maintaining official documentation.",
     bio: "Mercy brings strong organizational and communication skills to the team. Her attention to detail ensures that all project documentation, ethical standards, and administrative records are maintained at a professional standard.",
     photoUrl: "./MERCY.jpeg",
-    linkedin: "#",
+    linkedin: "https://www.linkedin.com/in/mercy-nabusiita-399927335",
     email: "nabusiitam@gmail.com"
   },
   {
